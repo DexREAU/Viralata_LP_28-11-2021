@@ -9,10 +9,10 @@ ScrollReveal().reveal('body, .intro_sec img, h1, .underdog_sec article h2, .unde
 const underdogBg = document.querySelector('.underdog_sec article img')
     
 
-
+let windowPosition;
 
 
     document.body.onscroll = function() {
-        let windowPosition = window.pageYOffset;
-          underdogBg.style.transform = "translateY(" + windowPosition / 10 + "px)";
+        windowPosition = Math.round(window.pageYOffset);
+          underdogBg.style.transform = "translateY(" + windowPosition / 8 + "px)";
       }
