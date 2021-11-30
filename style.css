@@ -350,34 +350,60 @@ h1 {
     background-attachment: fixed;
     width: 100%;
     min-height: 70rem;
-    color:var(--c1)
-} .products_sec article {
-    
+    color:var(--c1);
+    overflow: hidden;
+} .products_sec article {  
+    width: clamp(17rem, 80vw, 28rem);
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: right;
 } .products_sec span {
 
 } .products_sec h6 {
     font-size: clamp(6rem, 35vw, 11rem);
-    font-weight: 900;
+    position: absolute;
+    left: 1rem;
     transform: rotate(-90deg);
-    display: inline-block;
-    position: relative;
-    right: 78vw;
-    top: 0vw;
-    letter-spacing: -4px;
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    transform-origin: right center;
+    transform-origin: 50% 210%;
+    letter-spacing: -5px;
+    z-index: 2;
 } .products_sec p {
     position: relative;
-    width: clamp(9rem, 42vw, 24rem);
-    font-size: clamp(1rem, 4.8vw, 1.4rem);
-    line-height: clamp(1.3rem, 7vw, 2.5rem);
-    left: 45vw;
-    top: -25vw;
+    right: 0;
+    top: 4rem;
+    width: clamp(10rem, 42vw, 16rem);
+    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    z-index: 2;
+} .products_sec article img {
+    position: absolute;
+    z-index: 0;
+    bottom: -37rem;
+    right: -15rem;
+    width: 39rem;
+    max-width: unset;
+} .products_sec h6::after {
+    content: '';
+    position: absolute;
+    width: 11rem;
+    height: 0.9rem;
+    background: var(--c1);
+    display: block;
+    left: 0.6rem;
+    bottom: 0;
 }
 
+.products_list_sec {
 
+} .products_list_sec article {
+    width: 100%;
+    margin: -6rem auto 0 auto;
+    min-height: 120rem;
+    background-color: var(--c2);
+    border-radius: 100rem 100rem 0 0;
+    border: 2rem solid #f2f2f2;
+    box-sizing: border-box;
+}
 
 
 
@@ -536,14 +562,14 @@ h1 {
     .products_sec {
         background-attachment: initial;
     } .products_sec article {
-        
-        width: 60%;
-        margin: 0 auto;
     } .products_sec h6 {
-        position: absolute;
+        
     } .products_sec p {
-        top:unset;
-        left:unset;
+        
+        
+    } .products_sec article img {
+        bottom: calc(-41rem + 10vw);
+        right: calc(-30vw + 6rem);
     }
 }
 
