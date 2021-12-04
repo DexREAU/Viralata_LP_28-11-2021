@@ -1,18 +1,12 @@
 
-ScrollReveal().reveal('body, .intro_sec img, h1, .underdog_sec article h2, .underdog_sec article h3, .why_sec span, .why_sec p, .web3_sec p, .how_sec p', {
+ScrollReveal().reveal('body, h1, .underdog_sec article h2, .underdog_sec article h3, .why_sec span, .why_sec p, .web3_sec p, .how_sec p, .products_sec h6, .products_sec p, .products_list li, .products_list img, .blog_section article', {
     duration:1600,
     delay:100,
     easing: 'ease',
 });
     
+// let windowPosition = window.pageYOffset;
 
-const underdogBg = document.querySelector('.underdog_sec article img')
-    
-
-let windowPosition;
-
-
-    document.body.onscroll = function() {
-        windowPosition = Math.round(window.pageYOffset);
-          underdogBg.style.transform = "translateY(" + windowPosition / 8 + "px)";
-      }
+// document.body.onscroll = function() {
+//     windowPosition = window.pageYOffset;
+// }
