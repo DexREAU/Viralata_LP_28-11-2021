@@ -134,7 +134,7 @@ img {
 } .square02 {
     animation-delay: 2.2s;
 } .square03 {
-    animation-delay: 3.6s;
+    animation-delay: 3s;
 } .square06 {
     animation-delay: .4s;
 }
@@ -143,7 +143,7 @@ img {
     0% {
         opacity: 1;
     } 15% {
-        opacity: 0.3;
+        opacity: 0.6;
     } 25% {
         opacity: 1;
     } 100% {
@@ -192,7 +192,7 @@ h1 {
     left: -5%;
     width: 50%;
     height: 110%;
-    background-image: linear-gradient(-60deg, #00cec8,#ffa749);
+    background-image: linear-gradient(20deg, #04fff8,#ff8400);
     background-attachment: fixed;
 }
 
@@ -205,11 +205,9 @@ h1 {
     position: absolute;
     z-index: -1;
     top: -5%;
-    left: -5%;
-    width: 100%;
-    height: 110%;
+    left: 2vw;
+    height: 100%;
     object-fit: cover;
-    object-position: 20%;
 } .underdog_sec div {
     background-color: var(--c4);
     position: absolute;
@@ -241,9 +239,7 @@ h1 {
     margin: 0 0 1rem 0;
     user-select: none;
 } .why_sec article {
-    background-image: linear-gradient(180deg, #2F454C, var(--c1));
-    background-color: var(--c4);
-    box-shadow: 0 1rem 3rem -0.4rem var(--c1);
+    background-color: var(--c1);
     width: clamp(17rem, 80vw, 70rem);
     margin: 0 auto;
     padding: 2rem;
@@ -334,8 +330,8 @@ h1 {
     font-weight: 900;
 }.how_title div {
     position: relative;
-    display: flex;
-    justify-content: right;
+    display: block;
+    text-align: right;
     font-size: clamp(1.5rem, 6vw, 2rem);
     font-weight: 100;
     letter-spacing: 2px;
@@ -395,7 +391,7 @@ h1 {
     background-color: var(--c2);
     background-image: url('assets/white_dog_bg.jpg');
     background-position: 75% top;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
     width: 100%;
@@ -412,7 +408,7 @@ h1 {
 } .products_sec span {
 
 } .products_sec h6 {
-    font-size: clamp(6rem, 35vw, 11rem);
+    font-size: clamp(6rem, 32vw, 11rem);
     position: absolute;
     left: 1rem;
     transform: rotate(-90deg);
@@ -420,11 +416,11 @@ h1 {
     letter-spacing: -5px;
     z-index: 2;
 } .products_sec p {
-    position: relative;
+    position: absolute;
     right: 0;
     top: 4rem;
     width: clamp(10rem, 42vw, 16rem);
-    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    font-size: clamp(1rem, 4.6vw, 1.3rem);
     z-index: 2;
 } .products_sec article img {
     position: absolute;
@@ -622,8 +618,8 @@ footer .social {
     } .why_sec div {
         width: 80%;
     } .why_sec p {
-        font-size: clamp(1rem, 1.8vw, 1.1rem);
-        line-height: clamp(1.4rem, 2vw, 1.7rem);
+        font-size: clamp(1rem, 1.8vw, 1.25rem);
+        line-height: clamp(1.4rem, 2.3vw, 2.2rem);
         margin: 2rem 0 0 0;
         width: 90%;
         font-weight: 100;
@@ -695,12 +691,12 @@ footer .social {
 
     .products_sec {
         background-attachment: initial;
+        background-size: 100%;
     } .products_sec article {
     } .products_sec h6 {
         
     } .products_sec p {
-        
-        
+        font-size: clamp(1rem, 4.6vw, 1.4rem);
     } .products_sec article img {
         bottom: calc(-13rem + 10vw);
         right: calc(-30vw + 5rem);
