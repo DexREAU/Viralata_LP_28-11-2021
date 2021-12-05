@@ -108,6 +108,7 @@ img {
     justify-content: left;
 } .intro_sec svg {
     width: clamp(17rem, 80vw, 34rem);
+    filter: drop-shadow(0 0 1rem #365161);
     margin: 0 auto;
 } .intro_sec a {
     border-right: 0.3rem solid var(--c2);
@@ -119,7 +120,7 @@ img {
     margin-bottom: 2rem;
 }
 
-.square09, .square08, .square07, .square06, .square04, .square03, .square02, .square01 {
+.square09, .square08, .square07, .square06, .square04, .square03, .square02, .square01, .square05 {
     animation: blinksquare 7s ease infinite;
 } .square09 {
     animation-delay: 1.5s;
@@ -137,6 +138,8 @@ img {
     animation-delay: 3s;
 } .square06 {
     animation-delay: .4s;
+} .square05 {
+    animation-delay: 2s;
 }
 
 @keyframes blinksquare {
