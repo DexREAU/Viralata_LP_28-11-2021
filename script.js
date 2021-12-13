@@ -4,13 +4,21 @@ ScrollReveal().reveal('body, h1, .underdog_sec article h2, .underdog_sec article
     easing: 'ease',
 });
 
-const timelineSec = document.querySelector('.timeline_sec')
+const timelineCtnr = document.querySelector('.timeline_ctnr')
 
+let startWindowsPosition;
+let windowPosition;
 
-ScrollReveal().reveal(timelineSec, {
-    duration:1200,
+ScrollReveal().reveal(timelineCtnr, {
+    duration:600,
     easing: 'ease',
     afterReveal: function (el) {
+        startWindowsPosition = window.pageYOffset;
         
+        document.body.onscroll = function() {
+            windowPosition = window.pageYOffset;
+        
+            timelineCtnr.scrollLeft = (timelineCtnr.scrollLeft) + (windowPosition - startWindowsPosition) /10;
+        }
     }
 });
