@@ -47,6 +47,8 @@ img {
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: var(--c3);
+  } .timeline_ctnr::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
   }
   
   /* Handle on hover */
