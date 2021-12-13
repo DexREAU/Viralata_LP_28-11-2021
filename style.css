@@ -639,7 +639,7 @@ footer .social {
     left: 50%;
     transform: translate(2rem, -40%);
 } .not_first_event .event_dot {
-    visibility: hidden;
+    display:none;
 }
 
 
@@ -676,7 +676,7 @@ footer .social {
 
     .mobile_hidden {
         display:initial;
-    } .desktop_hidden {
+    } .desktop_hidden, .dots.desktop_hidden {
         display:none;
     }
     
@@ -868,11 +868,14 @@ footer .social {
         transform: translateY(calc(-100% + -1px));
     } .timeline_sec h4 {
 
-    } .timeline_ctnr > *:last-child {
+    } .last_event_desktop_margin {
         margin-right: calc(50vw - 12.5rem);
     }
 
-
+    .not_first_event .event_dot {
+        visibility: hidden;
+        display:unset;
+    }
 }
 
 
