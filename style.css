@@ -36,6 +36,7 @@ img {
 
 ::-webkit-scrollbar {
     width: 6px;
+    height:8px;
   }
   
   /* Track */
@@ -577,6 +578,8 @@ footer .social {
     background: var(--c1);
     margin: 0 auto;
     border-radius: 10rem;
+} .dots.desktop_hidden {
+    -webkit-mask-image: linear-gradient(180deg, black, transparent)
 } .event {
     position: relative;
 } .event_dot {
@@ -818,11 +821,12 @@ footer .social {
 
     .timeline_sec {
         position: relative;
+        padding: clamp(3rem, 10vw, 5rem) 4rem 4rem 4rem;
     } .timeline_ctnr {
         display: flex;
         align-items: center;
         overflow-x: scroll;
-        padding: 3rem 0 12rem calc(50vw - 12.5rem);
+        padding: 3rem 0 10rem calc(50vw - 16.5rem);
         box-sizing: border-box;
         width: 100%;
         -webkit-mask-image: linear-gradient(90deg, black 70%, transparent 98%);
@@ -872,7 +876,7 @@ footer .social {
     } .timeline_sec h4 {
 
     } .last_event_desktop_margin {
-        margin-right: calc(50vw - 12.5rem);
+        margin-right: calc(50vw - 16.5rem);
     }
 
     .not_first_event .event_dot {
