@@ -36,17 +36,3 @@ if (window.matchMedia("(orientation:landscape)").matches) {
         }
     });
 }
-
-        document.body.onscroll = function() {
-            if(scrollTime == false) {
-
-            } else {
-                windowPosition = window.pageYOffset;
-            
-                introSec.scrollLeft = (introSec.scrollLeft) + (windowPosition - startWindowsPosition)/50;
-
-                setTimeout(() => {
-                    scrollTime = false;
-                }, 3000);
-            }
-        }
