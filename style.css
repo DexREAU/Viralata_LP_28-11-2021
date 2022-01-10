@@ -21,6 +21,7 @@ html {
     --c2: #f8f8ff;
     --c3: #00f4d2;
     --c4: #161a1b;
+    --c4-2:#1a2327;
     --c5: #ffdc81;
     --c5-2: #cee09e;
 }
@@ -65,8 +66,8 @@ img {
 
 
 .logo {
-    padding: calc(7rem - 4vw) 0 calc(2rem + 3vw) 0;
-    width: clamp(15rem, 70vw, calc(28rem - 9vw));
+    padding: calc(9rem - 4vw) 0 calc(3rem + 3vw) 0;
+    width: clamp(15rem, 70vw, calc(33rem - 9vw));
     margin: 0 auto;
     display: block;
 }
@@ -92,12 +93,11 @@ img {
 .social {
     display: flex;
     justify-content: center;
-    gap: 0.6rem;
 } .social a {
     display: inline-block;
     width: clamp(1rem, 5vw, 1.3rem);
     height: clamp(1rem, 5vw, 1.3rem);
-    margin-left: 0.4rem;
+    padding: 0 0.4rem;
 } .social img {
     width: 100%;
 }
@@ -111,11 +111,11 @@ img {
     justify-content: left;
 } .intro_sec svg {
     width: clamp(17rem, 80vw, 34rem);
-    filter: drop-shadow(0 0 1rem #365161);
+    filter: drop-shadow(0 0 0.8rem #233f50);
     margin: 0 auto;
 } .intro_sec a {
-    border-right: 0.3rem solid var(--c2);
-    border-bottom: 0.3rem solid var(--c2);
+    border-right: 0.4rem solid var(--c2);
+    border-bottom: 0.4rem solid var(--c2);
     display: block;
     width: 0.8rem;
     height: 0.8rem;
@@ -174,7 +174,7 @@ img {
 
 h1 {
     width: clamp(17rem, 80vw, 34rem);
-    font-size: clamp(2.4rem, 12vw, 4.6rem);
+    font-size: clamp(2.6rem, 12vw, 4.6rem);
     line-height: clamp(3.1rem, 15vw, 5.5rem);
     margin: 3rem auto 0 auto;
     display: block;
@@ -366,7 +366,7 @@ h1 {
     display: block;
     margin: 0 auto;
     width: clamp(17rem, 80vw, 60rem);
-    filter: drop-shadow(0 0 20px #776);
+    filter: drop-shadow(0 0 20px #565);
 }
 
 
@@ -452,7 +452,7 @@ h1 {
     width: 100%;
     background-color: var(--c2);
     min-height: 50rem;
-    padding-top: 7rem;
+    padding-top: 9rem;
     position: relative;
     background-image: linear-gradient(0deg, var(--c5), transparent 10rem);
     border-radius: 0 0 13rem 13rem;
@@ -464,7 +464,7 @@ h1 {
     justify-content: center;
     grid-template-columns: 1fr;
     padding: 0;
-    width: clamp(17rem, 82vw, 50rem);
+    width: clamp(17rem, 77vw, 52rem);
     justify-content: space-between;
 } .products_list li {
     
@@ -475,14 +475,14 @@ h1 {
     display: inline;
     color: var(--c4);
 }  .products_list h4 {
-    font-size: clamp(1rem, 4.5vw, 1.2rem);
+    font-size: clamp(1rem, 4.3vw, 1.2rem);
     line-height: clamp(1.6rem, 5vw, 1.9rem);
     margin-top: 0.7rem;
     font-weight: 400;
 } .products_list img {
     margin: 4rem auto 0 auto;
     display: block;
-    width: clamp(18rem, 90vw, 48rem);
+    width: clamp(18rem, 90vw, 58rem);
 } .products_list a, .soon_a {
     padding: 0.9rem 1.4rem;
     display: inline-block;
@@ -524,14 +524,18 @@ h1 {
     margin-bottom: 1rem;
     border-radius: 0.4rem;
 } .blog_section h5 {
-    font-size: clamp(1.4rem, 6.5vw, 1.9rem);
-    line-height: clamp(2rem, 9vw, 2.8rem);
+    font-size: clamp(1.4rem, 6.5vw, 2rem);
+    line-height: clamp(2rem, 9vw, 2.7rem);
     margin-bottom: 2rem;
     letter-spacing: 1px;
+} .blog_section img:hover {
+    filter:brightness(1.1)
 }  .blog_section p {
-    font-size: clamp(1rem, 5vw, 1.15rem);
+    font-size: clamp(1rem, 5vw, 1.2rem);
     line-height: clamp(1.6rem, 5vw, 1.9rem);
     text-align: justify;
+    font-weight: 100;
+    color: #DDD;
 } .blog_section p a {
     color: var(--c3);
     padding: 0.15rem 0.4rem;
@@ -558,8 +562,8 @@ footer .social {
 }
 
 .timeline_sec {
-    background-color:var(--c4);
-    background-image: linear-gradient(90deg, var(--c4), #080A0A);
+    background-color:var(--c4-2);
+    background-image: linear-gradient(180deg, var(--c4-2), var(--c4));
     padding: clamp(3rem, 10vw, 5rem) 0 0 0;
 } .timeline_sec h4 {
     text-align: center;
@@ -626,11 +630,12 @@ footer .social {
     border-radius: 0.3rem;
     border: 1px solid var(--c3);
 } .event article h5 {
-    font-size: clamp(0.8rem, 6vw, 1.2rem);
+    font-size: clamp(0.8rem, 6.5vw, 1.5rem);
     font-weight: 600;
     font-family: 'Roboto Mono', sans-serif;
     color: var(--c3);
-    width: clamp(19rem, 38vw, 21rem);
+    width: clamp(13rem, 38vw, 22rem);
+    line-height: clamp(1rem, 8vw, 2rem);
     margin: 0 auto 0.6rem auto;
 } .event time {
     position: absolute;
@@ -663,21 +668,24 @@ footer .social {
 
 
 
-@media (orientation:landscape) and (min-width:120vh), (min-width:1000px) {
-    
 
+
+
+
+@media (orientation:landscape) and (min-width:120vh), (min-width:1000px) {
 
     .intro_sec {
         flex-flow: row;
+        gap: clamp(1rem, 6vw, 11rem);
     } .intro_sec svg {
         width: clamp(7rem, 38vw, 34rem);
-        margin: 0 auto;
+        margin: 0;
     }
 
     h1 {
-        width: clamp(17rem, 35vw, 34rem);
-        font-size: clamp(2.4rem, 5.2vw, 4.4rem);
-        line-height: clamp(3.1rem, 6vw, 5.1rem);
+        width: clamp(17rem, 38vw, 38rem);
+        font-size: clamp(2.4rem, 5vw, 5rem);
+        line-height: clamp(3.1rem, 5.5vw, 5.5rem);
         margin: 0;
         user-select: none;
     }
@@ -794,6 +802,7 @@ footer .social {
         
     } .products_sec p {
         font-size: clamp(1rem, 4.6vw, 1.4rem);
+        line-height: 1.95rem;
     } .products_sec article img {
         bottom: calc(-13rem + 10vw);
         right: calc(-30vw + 5rem);
@@ -803,7 +812,7 @@ footer .social {
 
     .products_list ul {
         grid-template-columns: 1fr 1fr;
-        grid-gap: 4rem 5rem;
+        grid-gap: 5rem 8rem;
     } .products_list a span {
         transition: transform 0.4s ease;
     } .products_list a {
@@ -822,13 +831,14 @@ footer .social {
     }
 
     .timeline_sec {
+        background-image: linear-gradient(90deg, var(--c4-2), var(--c4));
         position: relative;
         padding: clamp(3rem, 10vw, 5rem) 4rem 4rem 4rem;
     } .timeline_ctnr {
         display: flex;
         align-items: center;
         overflow-x: scroll;
-        padding: 3rem 0 10rem calc(50vw - 16.5rem);
+        padding: 1rem 0 8rem calc(50vw - 16.5rem);
         box-sizing: border-box;
         width: 100%;
         -webkit-mask-image: linear-gradient(90deg, black 70%, transparent 98%);
@@ -884,6 +894,13 @@ footer .social {
     .not_first_event .event_dot {
         visibility: hidden;
         display:unset;
+    }
+
+    .social a {
+        transition:transform 0.3s ease;
+    } .social a:hover {
+        transform:scale(1.1);
+        transition: transform 0.05s ease-in;
     }
 }
 
