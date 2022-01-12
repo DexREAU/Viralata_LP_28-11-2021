@@ -44,9 +44,11 @@ document.onreadystatechange = function () {
     if (document.readyState == "interactive" || document.readyState == "complete") {
         setTimeout(() => {
             menuBt.style.transform = 'translateY(0) rotate(0deg)'
-        }, 300);
+        }, 200);
     }
   }
+
+const menu = document.querySelector('menu')
 
 const menuAnchors = document.querySelectorAll('menu a')
 
@@ -60,6 +62,8 @@ let showingMenu = false;
 
 function hamburguer() {
     if(showingMenu == false) {
+
+        menu.style.visibility = 'visible';
 
         bone01.style.transform = 'rotate(225deg)';
         bone02.style.transform = 'rotate(135deg)';
@@ -76,6 +80,8 @@ function hamburguer() {
 
         showingMenu = true;
     } else {
+        
+        menu.style.visibility = 'hidden';
 
         bone01.style.transform = 'rotate(0deg)';
         bone02.style.transform = 'rotate(0deg)';
