@@ -36,3 +36,56 @@ if (window.matchMedia("(orientation:landscape)").matches) {
         }
     });
 }
+
+
+
+
+
+const menuAnchors = document.querySelectorAll('menu a')
+
+const menuBt = document.querySelector('.menu_bt')
+
+const bone01 = document.querySelector('.bone01')
+const bone02 = document.querySelector('.bone02')
+
+let showingMenu = false;
+
+
+function hamburguer() {
+    if(showingMenu == false) {
+
+        bone01.style.transform = 'rotate(225deg)';
+        bone02.style.transform = 'rotate(135deg)';
+
+        for(i=0;i<menuAnchors.length;i++) {
+            menuAnchors[i].classList.add('showingbts')
+        }
+
+        setTimeout(() => {
+            for(i=0;i<menuAnchors.length;i++) {
+                menuAnchors[i].classList.add('no_delay')
+            }
+        }, 280);
+
+        showingMenu = true;
+    } else {
+
+        bone01.style.transform = 'rotate(0deg)';
+        bone02.style.transform = 'rotate(0deg)';
+
+        for(i=0;i<menuAnchors.length;i++) {
+            menuAnchors[i].classList.remove('no_delay')
+            menuAnchors[i].classList.remove('showingbts')
+        }
+
+        showingMenu = false;
+    }
+}
+
+menuBt.addEventListener('click', hamburguer)
+
+document.body.onscroll = function() {
+    if(showingMenu == true) {
+        hamburguer()
+    }
+}
