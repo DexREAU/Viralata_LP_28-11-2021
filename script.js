@@ -40,6 +40,13 @@ if (window.matchMedia("(orientation:landscape)").matches) {
 
 
 
+document.onreadystatechange = function () {
+    if (document.readyState == "interactive" || document.readyState == "complete") {
+        setTimeout(() => {
+            menuBt.style.transform = 'translateY(0) rotate(0deg)'
+        }, 300);
+    }
+  }
 
 const menuAnchors = document.querySelectorAll('menu a')
 
