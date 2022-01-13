@@ -102,3 +102,14 @@ document.body.onscroll = function() {
         hamburguer()
     }
 }
+
+
+
+
+
+
+navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+      registration.unregister()
+      document.location.reload()
+  } })
